@@ -4,7 +4,13 @@ const FONT = `'Inter', 'Helvetica Neue', Arial, sans-serif`;
 
 function IconShape() {
   return (
-    <svg width="76" height="78" viewBox="0 0 76 78" aria-hidden="true">
+    <svg
+      width="76"
+      height="78"
+      viewBox="0 0 76 78"
+      aria-hidden="true"
+      style={{ transform: "rotate(90deg)" }}
+    >
       <rect x="8" y="8" width="30" height="62" fill="#F97316" stroke="#111" strokeWidth="3" />
       <rect x="44" y="8" width="24" height="28" fill="#24507A" stroke="#111" strokeWidth="3" />
       <rect x="44" y="42" width="24" height="28" fill="#24507A" stroke="#111" strokeWidth="3" />
@@ -72,19 +78,16 @@ export default function HomePage({ onPlayToday, onPlayTutorial }) {
             letterSpacing: "0.1em",
           }}
         >
-          SUM TILES
+          FACTOR HENGE
         </h1>
 
         <div style={{ display: "flex", justifyContent: "center", marginBottom: 28 }}>
           <IconShape />
         </div>
 
-        <p style={{ textAlign: "center", fontSize: 36, lineHeight: 1.35, margin: "0 6px 26px", fontWeight: 500 }}>
-          Slide the tiles so the <strong>sum</strong> of the numbers in every row and column matches its target.
-        </p>
-
-        <p style={{ textAlign: "center", fontSize: 40, lineHeight: 1.35, margin: "0 6px 34px", fontWeight: 500 }}>
-          Square tiles can slide in all four directions. Long rectangles only slide the long way.
+        <p style={{ textAlign: "center", fontSize: 36, lineHeight: 1.35, margin: "0 6px 34px", fontWeight: 500 }}>
+          Remove number blocks until every block is supported by two or more factors. If the blocks above are not
+          supported by blocks below, the structure collapses.
         </p>
 
         <div style={{ display: "grid", gap: 14 }}>
